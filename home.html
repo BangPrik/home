@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="">
+  <title>template 01</title>
+
+<!--
+
+rice.place template 01. 
+
+please read rules on templates.html for info.
+
+-->
+        
+  <style>
+
+/**  link styling  **/
+a:link {
+  color: black;
+  text-decoration:underline;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: grey;
+}
+
+a:active {
+  color: black;
+}
+/**  end of link styleing  **/
+
+body {
+font-family:ms ui gothic;
+font-size:16px;
+color:black;
+background-color:#F5F9FF;
+background-image:url("");
+padding:10px;
+overflow:auto;
+}
+
+/**  div that holds everything  **/
+.container {  
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 1.2fr 1fr 1fr 1.8fr 0.2fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "bar bar bar . . ."
+    "header header header header box box"
+    "main main main main main main"
+    "main main main main main main"
+    "main main main main main main"
+    "footer footer footer footer footer footer";
+  margin:auto;
+  width:700px;
+  height:900px;
+}
+
+/**  top left div  **/
+.bar { 
+grid-area: bar; 
+border:1px solid black;
+border-bottom:none;
+border-radius:20px 20px 0px 0px;
+padding:10px;
+text-align:right;
+box-shadow: -1px -1.4px 1px inset #9e9699, 2px 3px 1.5px inset white, 0px 0px 2px #cccacb;
+background-color:white;
+}
+
+/**  the header div  **/
+.header { 
+grid-area: header; 
+border:1px solid black;
+border-right:none;
+box-shadow: -1px -1.4px 1px inset #9e9699, 2px 3px 1.5px inset white, 0px 0px 2px #cccacb;
+background-image:url("https://rice.nekoweb.org/image/48b01a4d7f2627a2b51043f8e2965994.gif");
+display:flex;
+}
+
+/**  site title styling  **/
+.sitetitle {
+align-self: flex-end;
+font-size:40px;
+font-weight:bold;
+width:100%;
+padding:10px;
+text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+}
+
+/**  div next to header  **/
+.box { 
+grid-area: box; 
+border:1px solid black;
+border-radius:0px 20px 0px 0px;
+padding:10px;
+box-shadow: -1px -1.4px 1px inset #9e9699, 2px 3px 1.5px inset white, 0px 0px 2px #cccacb;
+background-color:white;
+}
+
+/**  the main div  **/
+.main {  
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "navigation content content"
+    "navigation content content"
+    "navigation content content"
+    "navigation content content"
+    "navigation content content"
+    "navigation content content";
+  grid-area: main;
+}
+
+/**  the navigation div  **/
+.navigation { 
+grid-area: navigation; 
+border:1px solid black;
+border-top:none;
+box-shadow: -1px -1.4px 1px inset #9e9699, 2px 3px 1.5px inset white, 0px 0px 2px #cccacb;
+background-color:white;
+}
+
+/**  the navigation title div  **/
+.title {
+padding:10px;
+box-sizing: border-box;
+margin:auto;
+text-align:center;
+}
+
+/**  where the link buttons are in  **/
+.button {
+width:170px;
+padding:10px 10px 10px 20px;
+border:1px solid black;
+border-left:none;
+border-right:none;
+border-bottom:none;
+background-image:url("https://rice.nekoweb.org/rice/c028-6.gif");
+box-shadow: -1px -1.4px 1px inset #cccacb, 2px 3px 1.5px inset white, 0px 0px 2px #9e9699;
+}
+
+/**  hovered link buttons  **/
+.button:hover {
+width:170px;
+padding:10px 10px 10px 20px;
+border:1px solid black;
+border-left:none;
+border-right:none;
+border-bottom:none;
+background-image:url("https://rice.nekoweb.org/rice/c028-7.gif");
+box-shadow: -1px -1.4px 1px inset #9e9699, 2px 3px 1.5px inset white, 0px 0px 2px #cccacb;
+}
+
+/**  beneath the buttons  **/
+.intro {
+padding:10px;
+}
+
+/**  ..right side content  **/
+.content { 
+grid-area: content; 
+border:1px solid black;
+border-top:none;
+border-left:none;
+box-shadow: -1px -1.4px 1px inset #9e9699, 2px 3px 1.5px inset white, 0px 0px 2px #cccacb;
+padding:10px;
+overflow:auto;
+background-color:white;
+}
+
+/**  blue box  **/
+.box1 {
+width:100%;
+padding:10px;
+background-color:#B3CBE8;
+border:1px solid black;
+box-sizing: border-box;
+box-shadow: -1px -1.4px 1px inset #9e9699, 2px 3px 1.5px inset white, 0px 0px 2px #cccacb;
+}
+
+/**  text inside blue box  **/
+.text {
+width:100%;
+background-color:#ffffff;
+border:1px solid black;
+padding:10px;
+box-sizing: border-box;
+margin-top:10px;
+box-shadow: -1px -1.4px 1px inset #9e9699, 2px 3px 1.5px inset white, 0px 0px 2px #cccacb;
+}
+
+/**  THE footer  **/
+.footer { 
+grid-area: footer; 
+border:1px solid black;
+border-top:none;
+border-radius:0px 0px 20px 20px;
+padding:10px;
+text-align:center;
+box-shadow: -1px -1.4px 1px inset #9e9699, 2px 3px 1.5px inset white, 0px 0px 2px #cccacb;
+background-color:white;
+}
+
+
+  </style>
+        
+</head>
+    
+  <body>
+
+<div class="container">
+
+  <div class="bar">
+  title or whateva
+  </div>
+  
+  <div class="header">
+  
+  	<div class="sitetitle">site title</div>
+  
+  </div>
+  
+  <div class="box">
+  this can be a list, update, whatever you want it to be. <br><br>
+  template heavily re-created by <a href="https://www.pinterest.com/pin/534028468374558840/">this pin</a>.
+  </div>
+  
+  <div class="main">
+  
+    <div class="navigation">
+    
+    	<div class="title">navigation</div>
+        <div class="button"><img src="https://rice.nekoweb.org/rice/ball_s_06s.gif"> <a href="">link</a></div>
+        <div class="button"><img src="https://rice.nekoweb.org/rice/ball_s_06s.gif"> <a href="">link</a></div>
+        <div class="button"><img src="https://rice.nekoweb.org/rice/ball_s_06s.gif"> <a href="">link</a></div>
+        <div class="button"><img src="https://rice.nekoweb.org/rice/ball_s_06s.gif"> <a href="">link</a></div>
+        <div class="button"><img src="https://rice.nekoweb.org/rice/ball_s_06s.gif"> <a href="">link</a></div>
+        <div class="button"><img src="https://rice.nekoweb.org/rice/ball_s_06s.gif"> <a href="">link</a></div>
+        <div class="button"><img src="https://rice.nekoweb.org/rice/ball_s_06s.gif"> <a href="">link</a></div>
+        <div class="button"><img src="https://rice.nekoweb.org/rice/ball_s_06s.gif"> <a href="">link</a></div>
+        <div class="button"><img src="https://rice.nekoweb.org/rice/ball_s_06s.gif"> <a href="">link</a></div>
+        <div class="button" style="border-bottom:1px solid black;"><img src="https://rice.nekoweb.org/rice/ball_s_06s.gif"> <a href="">link</a></div>
+        
+        <div class="intro">
+        put whatever you want here.
+        </div>
+    
+    </div>
+    
+    <div class="content">
+    
+    	<div class="box1">
+        Gingerbread muffin liquorice pie muffin soufflé cake.
+        	<div class="text">
+            Cupcake ipsum dolor sit amet cupcake croissant. Chupa chups shortbread icing tart jelly beans cotton candy danish pie sesame snaps. Gingerbread muffin liquorice pie muffin soufflé cake.
+            </div>
+        
+        </div>
+        
+        <div class="box1" style="margin-top:10px;"> <!-- added margin-top to had gaps between divs thats horizontal -->
+        Gingerbread muffin liquorice pie muffin soufflé cake.
+        	<div class="text">
+            Powder I love candy canes jelly beans cake cake cake carrot cake muffin. Chocolate cake oat cake muffin gummies jelly-o donut. I love bonbon macaroon wafer wafer cotton candy. Sesame snaps shortbread chocolate icing gummies ice cream fruitcake. Jelly-o donut I love chocolate cake sweet shortbread wafer. Muffin pie danish dessert cheesecake. Carrot cake gummi bears chocolate bar jelly I love I love I love jelly-o cake. Liquorice icing cookie candy canes marshmallow.
+            </div>
+        
+        </div>
+        
+        <div class="box1" style="margin-top:10px;">
+        Gingerbread muffin liquorice pie muffin soufflé cake.
+        	<div class="text">
+            Cupcake ipsum dolor sit amet cupcake croissant. Chupa chups shortbread icing tart jelly beans cotton candy danish pie sesame snaps. Gingerbread muffin liquorice pie muffin soufflé cake.
+            </div>
+        
+        </div>
+        
+        <div class="box1" style="margin-top:10px;">
+        Gingerbread muffin liquorice pie muffin soufflé cake.
+        	<div class="text">
+            Powder I love candy canes jelly beans cake cake cake carrot cake muffin. Chocolate cake oat cake muffin gummies jelly-o donut. I love bonbon macaroon wafer wafer cotton candy. Sesame snaps shortbread chocolate icing gummies ice cream fruitcake. Jelly-o donut I love chocolate cake sweet shortbread wafer. Muffin pie danish dessert cheesecake. Carrot cake gummi bears chocolate bar jelly I love I love I love jelly-o cake. Liquorice icing cookie candy canes marshmallow.
+            </div>
+        
+        </div>
+    
+    </div> 
+    
+  </div>
+  
+  <div class="footer">
+  this is a footer. hosted on nekoweb, coded with love. 2025.
+  </div>
+  
+</div>
+
+  </body>
+    
+</html>
+  
